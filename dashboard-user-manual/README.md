@@ -1,15 +1,14 @@
-# **e-VITA Platform prototype – dashboard**
+# **e-VITA Platform Prototype – dashboard user manual**
 
-The following section describes the functionalities provided by the e-VITA platform that can be accessed through the e-VITA dashboard, mainly related to the registration and management of personal devices. The e-VITA platform dashboard has been implemented using _Ngx-admin_, one of the most popular and trusted front-end Angular open-source dashboard templates (NGX-ADMIN, 2022).
+The following section describes the functionalities provided by the e-VITA platform that can be accessed through the e-VITA dashboard, mainly related to the registration and management of personal devices. The e-VITA platform dashboard has been implemented using [Ngx-admin](https://akveo.github.io/ngx-admin/), one of the most popular and trusted front-end Angular open-source dashboard templates.
 
 ## Keycloak Identity manager – administration console
 
-As previously mentioned in section 1.2.1, Keycloak is the tool used within e-VITA as a third-party authorization server to manage the authentication and authorization of the users.
+Keycloak is the tool used within e-VITA as a third-party authorization server to manage the authentication and authorization of the users.
 
 The default theme proposed by the Keycloak server has been customized for the e-VITA application; in this way it was possible to have a specific look and feel for the end-user facing Keycloak administration console, login, welcome page, emails, and for the user&#39;s profile page.
 
-![alt tag](./img/e-VITA_Keycloak_homepage.png "e-VITA Keycloak homepage")
-
+<span><img title="e-VITA Keycloak homepage" alt="e-VITA Keycloak homepage" src="./img/e-VITA_Keycloak_homepage.png" style="width:70%; margin-left:30%;"></span>
 
 Keycloak provides an administration console that is used to manage realms. Within each realm it is possible, for an administrator, to register users and client applications managing roles and their associations with the users.
 
@@ -17,11 +16,13 @@ Keycloak provides an administration console that is used to manage realms. Withi
 
 ## Keycloak Identity manager – user registration and login
 
-In order to access e-VITA dashboard the user has to log in to the platform using the e-VITA Keycloak identity manager, using the login form shown in Figure 17. In order to access, however, the user must first register in Keycloak through the appropriate section shown in Figure 18, to generate personal Keycloak credentials (E-mail and Password).
+In order to access e-VITA dashboard the user has to log in to the platform using the e-VITA Keycloak identity manager, using the login form shown in Figure.
 
-![alt tag](./img/e-VITA_Login_Form.png "e-VITA Login Form")
+<span><img title="e-VITA Login Form" alt="e-VITA Login Form" src="./img/e-VITA_Login_Form.png" style="width:45%; margin-left:30%;"></span>
 
-![alt tag](./img/e-VITA_registration_Form.png "e-VITA registration Form")
+In order to access, however, the user must first register in Keycloak through the appropriate section shown in Figure, to generate personal Keycloak credentials (E-mail and Password).
+
+<span><img title="e-VITA registration Form" alt="e-VITA registration Form" src="./img/e-VITA_registration_Form.png" style="width:40%;margin-left:30%;"></span>
 
 After registering on the Keycloak platform and logging in, the user will be redirected directly to the Homepage of the e-VITA platform dashboard.
 
@@ -35,7 +36,7 @@ At the first access to the e-VITA platform, additional information will be reque
 
 Only once this information has been entered, it will be possible for the user to access the main dashboard.
 
-![alt tag](./img/User_profile_completion_form.png "User profile completion form")
+<span><img title="User profile form" alt="User profile form" src="./img/User_profile_completion_form.png" style="border: 5px solid #555;width:60%; margin-left:30%"></span>
 
 ## Homepage: general overview of the devices
 
@@ -43,25 +44,25 @@ The Homepage is the first page of the e-VITA dashboard where is presented an ove
 
 - _Device Name:_ the name chosen by the user and associated with the device during device registration phase.
 - _Device ID:_ an alphanumeric string associated with the device during device registration phase, generated and assigned internally by the e-VITA platform in order to uniquely identify the device.
-- _Information about the last measurement provided by the device:_ this section of the card shows the last measurement sent by the device (or, in the case of a device associated with a Cloud Service, the last measurement of the device taken from the relative external cloud service), if present. This information is obtained through a request to the Orion Context Broker (more information about this component in 1.2.2 paragraph). The last measurement is collected and saved in the Orion Context Broker only for two categories of devices: smart home sensors and wearable devices (more information about the device categories in the 2.5.1 paragraph). The other device category, the Coaching Devices, on the other hand, do not provide measurements but exchange text messages with the e-VITA platform and them are, therefore, not stored within the Orion Context Broker.
+- _Information about the last measurement provided by the device:_ this section of the card shows the last measurement sent by the device (or, in the case of a device associated with a Cloud Service, the last measurement of the device taken from the relative external cloud service), if present. This information is obtained through a request to the Orion Context Broker. The last measurement is collected and saved in the Orion Context Broker only for two categories of devices: smart home sensors and wearable devices. The other device category, the Coaching Devices, on the other hand, do not provide measurements but exchange text messages with the e-VITA platform and them are, therefore, not stored within the Orion Context Broker.
 - A _Refresh_ button: this button allows the user to visualize the last updated measurement of the device, if its value has changed.
 
 ![alt tag](./img/Homepage_platform_section.png "Homepage platform section")
 
 ## Device page: devices management
 
-In the Devices page it is possible to view all the devices already registered by the user. The visualization of them on the page is organized through _cards_ graphic component_;_ in each of them the essential information and all the possible operations for the device are exposed. Figure 21 shows the e-VITA platform _Devices_ page.
+In the Devices page it is possible to view all the devices already registered by the user. The visualization of them on the page is organized through _cards_ graphic component_;_ in each of them the essential information and all the possible operations for the device are exposed. The Figure shows the e-VITA platform _Devices_ page.
 
 The basic information of the device shown on each card are the following:
 
 - _Device Name:_ The Name assigned by the user to the device during the registration phase.
-- _Device Type:_ the specific type of the device (go to 2.5.1 paragraph for the classification of the device types supported by the platform).
+- _Device Type:_ the specific type of the device.
 
 The possible operations on the device are the following:
 
 - _Delete:_ through this operation, the user will delete the specific device from the e-VITA platform and the related data in the Object Storage and the Orion Context Broker. More details on this operation in section 2.5.4.
-- _Details:_ through this operation, the user will be able to view a specific page where are included detailed information of the selected device and instructions for sending and/or reading the measurements. More details on this operation in 2.5.2 paragraph.
-- _Enable/disable:_ Through this operation, the user has the possibility to change the status of the device: by disabling it, the device information and previous collected data will remain saved in the e-VITA platform, but the device will be not able to send/receive data. More details on this operation in 2.5.3 paragraph.
+- _Details:_ through this operation, the user will be able to view a specific page where are included detailed information of the selected device and instructions for sending and/or reading the measurements. 
+- _Enable/disable:_ Through this operation, the user has the possibility to change the status of the device: by disabling it, the device information and previous collected data will remain saved in the e-VITA platform, but the device will be not able to send/receive data.
 
 ![alt tag](./img/Devices_page.png "Devices page")
 
@@ -69,15 +70,15 @@ The possible operations on the device are the following:
 
 In the Devices page of the e-VITA dashboard, the user has the possibility to register a new device. By clicking on the Add button, a dedicated page will be displayed for storing a new device in the user&#39;s account.
 
-The Figure 22 shows the registration device page. In this phase, the e-VITA dashboard asks the user to enter the following fields:
+The Figure shows the registration device page. In this phase, the e-VITA dashboard asks the user to enter the following fields:
 
 - _Device Type_: the specific device type to be added, by selecting one of all the possible available values. More details about the possible device types are detailed in the second part of the current paragraph.
 - _Source Device Id_: this value corresponds to the original identification code of the device (if present). This identifier is entered by the user during this phase or, in if the e-VITA platform can obtain it automatically, it is pre-filled.
 - _Measures Frequency_ (optional parameter that is present only for specific device types): it is a field that allows the user to configure a time parameter. More details on this field are present in the second part of the current paragraph.
 
-![alt tag](./img/Register_device_page.png "Register device page")
+<span><img title="title" alt="text" src="./img/Register_device_page.png" style="width:30%;margin-left: 30%;"></span>
 
-The Table 1 shows the classification of the possible devices currently supported by the e-VITA platform. It should be noticed that, in e-VITA platform, the devices are managed as logical entities related to the different typologies of measure that the device provides, therefore for some real devices there can be more logical devices. For instance, in the system, there are three different logical Oura Ring devices (OURARING\_ACTIVITY, OURARING\_READINESS, OURARING\_SLEEP) even there is only one real device that provides all these measurement
+The Table shows the classification of the possible devices currently supported by the e-VITA platform. It should be noticed that, in e-VITA platform, the devices are managed as logical entities related to the different typologies of measure that the device provides, therefore for some real devices there can be more logical devices. For instance, in the system, there are three different logical Oura Ring devices (OURARING\_ACTIVITY, OURARING\_READINESS, OURARING\_SLEEP) even there is only one real device that provides all these measurement
 
 The table includes the following attributes:
 
@@ -90,26 +91,26 @@ The table includes the following attributes:
 - _Platform access type:_ this field takes on two different values:
 
   - _Direct access:_ this category includes devices that send their measurements directly to the e-VITA platform.
-  - _Access via cloud service:_ this category includes those particular types of devices that are connected to a proprietary cloud service. In this case, the measurements are retrieved from the e-VITA platform directly from the Cloud, using the user credential of the device owner registered in the service. In this case, during the device registration phase, the e-VITA platform will ask the user to first register for the specific Cloud Service, by accessing the latter with the user credentials. More details on Cloud Services management in the paragraph 2.6.
+  - _Access via cloud service:_ this category includes those particular types of devices that are connected to a proprietary cloud service. In this case, the measurements are retrieved from the e-VITA platform directly from the Cloud, using the user credential of the device owner registered in the service. In this case, during the device registration phase, the e-VITA platform will ask the user to first register for the specific Cloud Service, by accessing the latter with the user credentials. 
 
 For the devices included in this category an additional field will be displayed in the registration form. This field, called _Measure Frequency_, defines the time interval between two consecutive measurements requests to the cloud service. The default value for this field, if not changed by the user, is 10 minutes.
 
 | Device Type                         | Device Category             | Platform access type      |
 | ----------------------------------- | --------------------------- |-------------------------- |
-| ANDROID_ROBOT  					  | Coaching Device             | Direct access             |
-| CELESTE                             | Coaching Device             | Direct access      	    |
-| DARUMA                              | Coaching Device             | Direct access 		    |
-| GATEBOX                 			  | Coaching Device             | Direct access  			|
-| NAO_ROBOT                 		  | Coaching Device             | Direct access 			|
-| NETATMO_AIR_QUALITY  				  | Smart home Sensor           | Access via cloud service  |
-| ENOCEAN_DOOR_SENSOR                 | Smart home Sensor           | Direct access  			|
-| ENOCEAN_MOTION_SENSOR               | Smart home Sensor           | Direct access 			|
-| ENOCEAN_TEMPERATURE_SENSOR          | Smart home Sensor           | Direct access 			|
-| DELTADORE_INTRUSION_SENSOR          | Smart home Sensor           | Direct access 			|
-| DELTADORE_MOTION_SENSOR             |	Smart home Sensor           | Direct access 			|
-| NEU_BRAIN             			  | Wearable Device             | Access via cloud service  |
+| ANDROID_ROBOT  					            | Coaching Device             | Direct access             |
+| CELESTE                             | Coaching Device             | Direct access      	      |
+| DARUMA                              | Coaching Device             | Direct access 		        |
+| GATEBOX                 			      | Coaching Device             | Direct access  			      |
+| NAO_ROBOT                 		      | Coaching Device             | Direct access 			      |
+| NETATMO_AIR_QUALITY  				        | Smart home Sensor           | Access via cloud service  |
+| ENOCEAN_DOOR_SENSOR                 | Smart home Sensor           | Direct access  			      |
+| ENOCEAN_MOTION_SENSOR               | Smart home Sensor           | Direct access 			      |
+| ENOCEAN_TEMPERATURE_SENSOR          | Smart home Sensor           | Direct access 			      |
+| DELTADORE_INTRUSION_SENSOR          | Smart home Sensor           | Direct access 			      |
+| DELTADORE_MOTION_SENSOR             |	Smart home Sensor           | Direct access 			      |
+| NEU_BRAIN             			        | Wearable Device             | Access via cloud service  |
 | NEU_TRAINING                        |	Wearable Device             | Access via cloud service  |
-| OURARING_ACTIVITY          		  | Wearable Device             | Access via cloud service  |
+| OURARING_ACTIVITY          		      | Wearable Device             | Access via cloud service  |
 | OURARING_READINESS                  | Wearable Device             | Access via cloud service  |
 | OURARING_SLEEP                      | Wearable Device             | Access via cloud service  |
 
@@ -119,11 +120,11 @@ On the Details page, specific and detailed information on the device of interest
 
 - _Device Name:_ The Name assigned by the user to the device during the registration phase.
 - _Source Device Id:_ this value corresponds to the original identification code of the device (if present).
-- _Type:_ this value corresponds to the specific device typology. More details about this value in 2.5.1 paragraph.
+- _Type:_ this value corresponds to the specific device typology. 
 - _Creation Date:_ registration date of the device on the platform.
 - _Last modification Date:_ date of the most recent modification of the device information
-- _e-VITA Device Token:_ generated by e-VITA during the registration of the device, it is intended to be used as an API key to authorize the device to send the data. It is important to underline that each device has a different _e-VITA Device Token_, that can be regenerated from the e-VITA Dashboard. Only the user that registered the device is able to access this private information, thanks to the user authentication and authorization solutions. More details about this aspects are included in the D7.7 (e-VITA, 2022).
-- _e-VITA Device Id:_ generated by e-VITA during the registration phase and assigned to the device to uniquely identify it. More details about this aspects are included in the D7.7 (e-VITA, 2022).
+- _e-VITA Device Token:_ generated by e-VITA during the registration of the device, it is intended to be used as an API key to authorize the device to send the data. It is important to underline that each device has a different _e-VITA Device Token_, that can be regenerated from the e-VITA Dashboard. Only the user that registered the device is able to access this private information, thanks to the user authentication and authorization solutions. 
+- _e-VITA Device Id:_ generated by e-VITA during the registration phase and assigned to the device to uniquely identify it. 
 - _QR-Code:_ QR code to provide device information to devices equipped with camera. It contains a JSON language string with the following fields:
   - _e-VITA Device Id_
   - _e-VITA Device Token_
@@ -137,9 +138,9 @@ On the Details page, specific and detailed information on the device of interest
 - _Example Payload:_ it contains an example of payload to be sent in the body of the request described in the field _Endpoint to send measures._ The payload type changes based on the device type. This field will be displayed only if the _Endpoint to send measures_ field exists.
 - _Update measures frequency:_ This field will be displayed only if the device belongs to the &quot;Access via Cloud service&quot; category. It contains a field that allows the user to configure the _Frequency_ parameter of the device.
 
-![alt tag](./img/first_part_of_the_Device_Details_page.png "first part of the Device Details page")
+<span><img title="Device Details page1" alt="Device Details page1" src="./img/first_part_of_the_Device_Details_page.jpg" style="border: 5px solid #555;width:60%; margin-left:30%"></span>
 
-![alt tag](./img/sec_part_of_the_Device_Details_page.png "second part of the Device Details page")
+<span><img title="Device Details page2" alt="Device Details page2" src="./img/sec_part_of_the_Device_Details_page.png" style="border: 5px solid #555;width:60%; margin-left:30%"></span>
 
 ### Device enabling/disabling
 
@@ -150,9 +151,9 @@ As described at the beginning of the paragraph, one of the operations that the u
 
 ### Device deletion
 
-The user can delete a device, using the specific button. Figure 25 shows the alert message that appears after the deletion request.
+The user can delete a device, using the specific button. The Figure shows the alert message that appears after the deletion request.
 
-![alt tag](./img/Device_deletion_notice.png "Device deletion notice")
+<span><img title="Device delete" alt="Device delete" src="./img/Device_deletion_notice.png" style="border: 5px solid #555;width:40%; margin-left:30%"></span>
 
 Deleting a device all the information relating to the device stored in the e-VITA platform will be deleted specifically from the following storage components:
 
@@ -161,17 +162,17 @@ Deleting a device all the information relating to the device stored in the e-VIT
 
 ## Cloud Services page: cloud services management
 
-As described in paragraph 2.5.1., a subset of devices supported by the e-VITA platform are connected to a Cloud service. For such devices, the measurements are stored in the specific Cloud and have to be retrieved from it. This section provides details about the Cloud Services are supported by the e-VITA platform and how they are managed.
+A specific subset of devices supported by the e-VITA platform is connected to a Cloud service. For such devices, the measurements are stored in the specific Cloud and have to be retrieved from it. This section provides details about the Cloud Services are supported by the e-VITA platform and how they are managed.
 
 ### Cloud Services available
 
-Figure 26 shows the e-VITA platform page that allows the user to access to one or more external cloud services.
+The Figure shows the e-VITA platform page that allows the user to access to one or more external cloud services.
 
 The Cloud services currently supported by the platform are the following:
 
-- _Netatmo cloud platform:_ this external service allows to obtain the measurements of the &quot;NETATMO\_AIR\_QUALITY&quot; devices. More details on the specific Cloud Service in the section 1.1.8.
-- _Neu cloud platform for Neu device:_ this external service allows to obtain the measurements of the &quot;NEU&quot; devices. More details on the specific Cloud Service in the section 1.1.9.
-- _Oura ring cloud platform:_ this external service allows to obtain the measurements of the &quot;OURARING&quot; devices owned by the user. More details on the specific Cloud Service in the section 1.1.10.
+- _Netatmo cloud platform:_ this external service allows to obtain the measurements of the &quot;NETATMO\_AIR\_QUALITY&quot; devices.
+- _Neu cloud platform for Neu device:_ this external service allows to obtain the measurements of the &quot;NEU&quot; devices. 
+- _Oura ring cloud platform:_ this external service allows to obtain the measurements of the &quot;OURARING&quot; devices owned by the user.
 
 The user has to access with his credential to the specific cloud service before registering the relative device, in order to give the permission to e-VITA platform to get the measures from the cloud. The system will remind to access the cloud if the user tries to register the respective sensors before.
 
@@ -179,9 +180,9 @@ The user has to access with his credential to the specific cloud service before 
 
 ### Cloud Service log-in
 
-When the user wants to access a Cloud Service, the platform redirects him to the login page of the specific cloud. Once the user has entered their credentials, the external service will ask the user for consent for the use of their data saved on the cloud, in a third-party application (in our case e-VITA platform) as shown in Figure 27. In particular, it shows the specific case of the Netatmo external service, one of the currently available Cloud Services.
+When the user wants to access a Cloud Service, the platform redirects him to the login page of the specific cloud. Once the user has entered their credentials, the external service will ask the user for consent for the use of their data saved on the cloud, in a third-party application (in our case e-VITA platform) as shown in Figure. In particular, it shows the specific case of the Netatmo external service, one of the currently available Cloud Services.
 
-![alt tag](./img/Cloud_Services_login_page.png "Cloud Services login page")
+<span><img title="Cloud Services login page" alt="Cloud Services login page" src="./img/Cloud_Services_login_page.png" style="border: 5px solid #555;width:80%; margin-left:30%"></span>
 
 If the user grants the access to the data on the e-VITA platform, he will be redirected directly to the Devices page, where it will be possible to register a new device. Otherwise, the user will not be able to register the device.
 
@@ -189,10 +190,10 @@ If the user grants the access to the data on the e-VITA platform, he will be red
 
 The user can request to log-out from a specific Cloud Service. Removing a Cloud Service means, first of all, deleting all the user access information from the e-VITA platform (e.g., the deletion of the stored access token).
 
-![alt tag](./img/Cloud_Service_logout_notice_page.png "Cloud Service logout notice page")
+<span><img title="Cloud Service logout notice" alt="Cloud Service logout notice" src="./img/Cloud_Service_logout_notice_page.png" style="border: 2px solid #555;width:35%;"></span>
 
 In addition, two different possibilities are presented to the user:
 
-- The user can decide to log-out from the Cloud Service and permanently delete all the devices relating to the specific Cloud Service, from his registered devices. More details on the device deletion process in the 2.5.4 paragraph.
+- The user can decide to log-out from the Cloud Service and permanently delete all the devices relating to the specific Cloud Service, from his registered devices. 
 - The user can decide to log-out from the Cloud Service but to maintain the related devices still stored and viewable among the user registered devices. In this case, however, having logged out from the service, these devices will change their status in _disabled_; this means that their information will remain stored and still visible on the _Devices_ page, but the extraction by the e-VITA platform of new measurements, taken by these devices, will be suspended.
 
