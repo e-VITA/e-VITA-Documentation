@@ -8,7 +8,7 @@ Keycloak is the tool used within e-VITA as a third-party authorization server to
 
 The default theme proposed by the Keycloak server has been customized for the e-VITA application; in this way it was possible to have a specific look and feel for the end-user facing Keycloak administration console, login, welcome page, emails, and for the user&#39;s profile page.
 
-<span><img title="e-VITA Keycloak homepage" alt="e-VITA Keycloak homepage" src="./img/e-VITA_Keycloak_homepage.png" style="width:70%; margin-left:30%;"></span>
+<span><img title="e-VITA Keycloak homepage" alt="e-VITA Keycloak homepage" src="./img/e-VITA_Keycloak_homepage.png" style="width:80%;"></span>
 
 Keycloak provides an administration console that is used to manage realms. Within each realm it is possible, for an administrator, to register users and client applications managing roles and their associations with the users.
 
@@ -36,7 +36,7 @@ At the first access to the e-VITA platform, additional information will be reque
 
 Only once this information has been entered, it will be possible for the user to access the main dashboard.
 
-<span><img title="User profile form" alt="User profile form" src="./img/User_profile_completion_form.png" style="border: 5px solid #555;width:60%; margin-left:30%"></span>
+<span><img title="User profile form" alt="User profile form" src="./img/User_profile_completion_form.png" style="border: 2px solid #555;width:60%; margin-left:20%"></span>
 
 ## Homepage: general overview of the devices
 
@@ -138,9 +138,9 @@ On the Details page, specific and detailed information on the device of interest
 - _Example Payload:_ it contains an example of payload to be sent in the body of the request described in the field _Endpoint to send measures._ The payload type changes based on the device type. This field will be displayed only if the _Endpoint to send measures_ field exists.
 - _Update measures frequency:_ This field will be displayed only if the device belongs to the &quot;Access via Cloud service&quot; category. It contains a field that allows the user to configure the _Frequency_ parameter of the device.
 
-<span><img title="Device Details page1" alt="Device Details page1" src="./img/first_part_of_the_Device_Details_page.jpg" style="border: 5px solid #555;width:60%; margin-left:30%"></span>
+<span><img title="Device Details page1" alt="Device Details page1" src="./img/first_part_of_the_Device_Details_page.jpg" style="border: 2px solid #555;width:60%; margin-left:20%"></span>
 
-<span><img title="Device Details page2" alt="Device Details page2" src="./img/sec_part_of_the_Device_Details_page.png" style="border: 5px solid #555;width:60%; margin-left:30%"></span>
+<span><img title="Device Details page2" alt="Device Details page2" src="./img/sec_part_of_the_Device_Details_page.png" style="border: 2px solid #555;width:60%; margin-left:20%"></span>
 
 ### Device enabling/disabling
 
@@ -153,7 +153,7 @@ As described at the beginning of the paragraph, one of the operations that the u
 
 The user can delete a device, using the specific button. The Figure shows the alert message that appears after the deletion request.
 
-<span><img title="Device delete" alt="Device delete" src="./img/Device_deletion_notice.png" style="border: 5px solid #555;width:40%; margin-left:30%"></span>
+<span><img title="Device delete" alt="Device delete" src="./img/Device_deletion_notice.png" style="border: 2px solid #555;width:40%; margin-left:30%"></span>
 
 Deleting a device all the information relating to the device stored in the e-VITA platform will be deleted specifically from the following storage components:
 
@@ -182,7 +182,7 @@ The user has to access with his credential to the specific cloud service before 
 
 When the user wants to access a Cloud Service, the platform redirects him to the login page of the specific cloud. Once the user has entered their credentials, the external service will ask the user for consent for the use of their data saved on the cloud, in a third-party application (in our case e-VITA platform) as shown in Figure. In particular, it shows the specific case of the Netatmo external service, one of the currently available Cloud Services.
 
-<span><img title="Cloud Services login page" alt="Cloud Services login page" src="./img/Cloud_Services_login_page.png" style="border: 5px solid #555;width:80%; margin-left:30%"></span>
+<span><img title="Cloud Services login page" alt="Cloud Services login page" src="./img/Cloud_Services_login_page.png" style="border: 2px solid #555;width:80%;"></span>
 
 If the user grants the access to the data on the e-VITA platform, he will be redirected directly to the Devices page, where it will be possible to register a new device. Otherwise, the user will not be able to register the device.
 
@@ -190,7 +190,7 @@ If the user grants the access to the data on the e-VITA platform, he will be red
 
 The user can request to log-out from a specific Cloud Service. Removing a Cloud Service means, first of all, deleting all the user access information from the e-VITA platform (e.g., the deletion of the stored access token).
 
-<span><img title="Cloud Service logout notice" alt="Cloud Service logout notice" src="./img/Cloud_Service_logout_notice_page.png" style="border: 2px solid #555;width:35%;"></span>
+<span><img title="Cloud Service logout notice" alt="Cloud Service logout notice" src="./img/Cloud_Service_logout_notice_page.png" style="border: 2px solid #555;width:35%;margin-left:30%"></span>
 
 In addition, two different possibilities are presented to the user:
 
