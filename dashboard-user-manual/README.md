@@ -76,9 +76,15 @@ The Figure shows the registration device page. In this phase, the e-VITA dashboa
 - _Source Device Id_: this value corresponds to the original identification code of the device (if present). This identifier is entered by the user during this phase or, in if the e-VITA platform can obtain it automatically, it is pre-filled.
 - _Measures Frequency_ (optional parameter that is present only for specific device types): it is a field that allows the user to configure a time parameter. More details on this field are present in the second part of the current paragraph.
 
+The user can, in several steps, first select a specific category of devices from those available.
+
 <span><img title="title" alt="text" src="./img/Register_device_page.png" style="width:60%;margin-left: 30%;"></span>
 
+In the next step, you can select the specific type of device to register, from those available.
+
 <span><img title="title" alt="text" src="./img/Register_device_page2.png" style="width:60%;margin-left: 30%;"></span>
+
+Finally, in the final step, the user can enter specific information relating to the device to be added.
 
 <span><img title="title" alt="text" src="./img/Register_device_page3.png" style="width:60%;margin-left: 30%;"></span>
 
