@@ -36,7 +36,7 @@ The initial setup is completed.
 
 ## Change Gatebox character
 
-- e-VITA character are not available to normal account: to add e-VITA character, you need to contact the Gatebox Team and provide the e-mail address of your gatebox account. Then you will receive 3 e-VITA characters to your account.
+- e-VITA character are not available to normal account: to add e-VITA character, you need to contact the Gatebox Team (tsuji.sho@gateboxlab.com) and provide the e-mail address of your gatebox account. Then you will receive 3 e-VITA characters to your account.
 - After that, you can select e-VITA character. Select the device, it registered previous section. In order to access e-VITA dashboard the user has to log in to the platform using the e-VITA Keycloak identity manager, using the login form shown in Figure.
 
 <span><img title="config list" alt="config list" src="./img/config_list.png" style="width:35%; margin-left:35%;
