@@ -30,7 +30,7 @@ After registering on the Keycloak platform and logging in, the user will be redi
 
 At the first access to the e-VITA platform, additional information will be requested to the user to complete the ones provided during the registration phase. This additional information will be used to provide personalised service to the e-VITA user. Currently the information to be provided are:
 
-- User _Country:_ considering the context of use of the e-VITA platform within the project_,_ the countries that can selected are France, Italy, Germany and Japan.
+- User _Country:_ considering the context of use of the e-VITA platform within the project*,* the countries that can selected are France, Italy, Germany and Japan.
 - User _City:_ based on the previous selection, the user can choose one of the cities belonging to the selected Country.
 - User _Language:_ considering the possible Countries that the user can select, the provided languages that can be chosen by the user will be Italian, English, French, German and Japanese.
 
@@ -51,7 +51,7 @@ The Homepage is the first page of the e-VITA dashboard where is presented an ove
 
 ## Device page: devices management
 
-In the Devices page it is possible to view all the devices already registered by the user. The visualization of them on the page is organized through _cards_ graphic component_;_ in each of them the essential information and all the possible operations for the device are exposed. The Figure shows the e-VITA platform _Devices_ page.
+In the Devices page it is possible to view all the devices already registered by the user. The visualization of them on the page is organized through _cards_ graphic component*;* in each of them the essential information and all the possible operations for the device are exposed. The Figure shows the e-VITA platform _Devices_ page.
 
 The basic information of the device shown on each card are the following:
 
@@ -61,7 +61,7 @@ The basic information of the device shown on each card are the following:
 The possible operations on the device are the following:
 
 - _Delete:_ through this operation, the user will delete the specific device from the e-VITA platform and the related data in the Object Storage and the Orion Context Broker. More details on this operation in section 2.5.4.
-- _Details:_ through this operation, the user will be able to view a specific page where are included detailed information of the selected device and instructions for sending and/or reading the measurements. 
+- _Details:_ through this operation, the user will be able to view a specific page where are included detailed information of the selected device and instructions for sending and/or reading the measurements.
 - _Enable/disable:_ Through this operation, the user has the possibility to change the status of the device: by disabling it, the device information and previous collected data will remain saved in the e-VITA platform, but the device will be not able to send/receive data.
 
 ![alt tag](./img/Devices_page.png "Devices page")
@@ -76,9 +76,13 @@ The Figure shows the registration device page. In this phase, the e-VITA dashboa
 - _Source Device Id_: this value corresponds to the original identification code of the device (if present). This identifier is entered by the user during this phase or, in if the e-VITA platform can obtain it automatically, it is pre-filled.
 - _Measures Frequency_ (optional parameter that is present only for specific device types): it is a field that allows the user to configure a time parameter. More details on this field are present in the second part of the current paragraph.
 
-<span><img title="title" alt="text" src="./img/Register_device_page.png" style="width:30%;margin-left: 30%;"></span>
+<span><img title="title" alt="text" src="./img/Register_device_page.png" style="width:60%;margin-left: 30%;"></span>
 
-The Table shows the classification of the possible devices currently supported by the e-VITA platform. It should be noticed that, in e-VITA platform, the devices are managed as logical entities related to the different typologies of measure that the device provides, therefore for some real devices there can be more logical devices. For instance, in the system, there are three different logical Oura Ring devices (OURARING\_ACTIVITY, OURARING\_READINESS, OURARING\_SLEEP) even there is only one real device that provides all these measurement
+<span><img title="title" alt="text" src="./img/Register_device_page2.png" style="width:60%;margin-left: 30%;"></span>
+
+<span><img title="title" alt="text" src="./img/Register_device_page3.png" style="width:60%;margin-left: 30%;"></span>
+
+The Table shows the classification of the possible devices currently supported by the e-VITA platform. It should be noticed that, in e-VITA platform, the devices are managed as logical entities related to the different typologies of measure that the device provides, therefore for some real devices there can be more logical devices. For instance, in the system, there are three different logical Oura Ring devices (OURARING_ACTIVITY, OURARING_READINESS, OURARING_SLEEP) even there is only one real device that provides all these measurement
 
 The table includes the following attributes:
 
@@ -91,28 +95,27 @@ The table includes the following attributes:
 - _Platform access type:_ this field takes on two different values:
 
   - _Direct access:_ this category includes devices that send their measurements directly to the e-VITA platform.
-  - _Access via cloud service:_ this category includes those particular types of devices that are connected to a proprietary cloud service. In this case, the measurements are retrieved from the e-VITA platform directly from the Cloud, using the user credential of the device owner registered in the service. In this case, during the device registration phase, the e-VITA platform will ask the user to first register for the specific Cloud Service, by accessing the latter with the user credentials. 
+  - _Access via cloud service:_ this category includes those particular types of devices that are connected to a proprietary cloud service. In this case, the measurements are retrieved from the e-VITA platform directly from the Cloud, using the user credential of the device owner registered in the service. In this case, during the device registration phase, the e-VITA platform will ask the user to first register for the specific Cloud Service, by accessing the latter with the user credentials.
 
 For the devices included in this category an additional field will be displayed in the registration form. This field, called _Measure Frequency_, defines the time interval between two consecutive measurements requests to the cloud service. The default value for this field, if not changed by the user, is 10 minutes.
 
-| Device Type                         | Device Category             | Platform access type      |
-| ----------------------------------- | --------------------------- |-------------------------- |
-| ANDROID_ROBOT  					            | Coaching Device             | Direct access             |
-| CELESTE                             | Coaching Device             | Direct access      	      |
-| DARUMA                              | Coaching Device             | Direct access 		        |
-| GATEBOX                 			      | Coaching Device             | Direct access  			      |
-| NAO_ROBOT                 		      | Coaching Device             | Direct access 			      |
-| NETATMO_AIR_QUALITY  				        | Smart home Sensor           | Access via cloud service  |
-| ENOCEAN_DOOR_SENSOR                 | Smart home Sensor           | Direct access  			      |
-| ENOCEAN_MOTION_SENSOR               | Smart home Sensor           | Direct access 			      |
-| ENOCEAN_TEMPERATURE_SENSOR          | Smart home Sensor           | Direct access 			      |
-| DELTADORE_INTRUSION_SENSOR          | Smart home Sensor           | Direct access 			      |
-| DELTADORE_MOTION_SENSOR             |	Smart home Sensor           | Direct access 			      |
-| NEU_BRAIN             			        | Wearable Device             | Access via cloud service  |
-| NEU_TRAINING                        |	Wearable Device             | Access via cloud service  |
-| OURARING_ACTIVITY          		      | Wearable Device             | Access via cloud service  |
-| OURARING_READINESS                  | Wearable Device             | Access via cloud service  |
-| OURARING_SLEEP                      | Wearable Device             | Access via cloud service  |
+| Device Type                | Device Category   | Platform access type     |
+| -------------------------- | ----------------- | ------------------------ |
+| CELESTE                    | Coaching Device   | Direct access            |
+| DARUMA                     | Coaching Device   | Direct access            |
+| GATEBOX                    | Coaching Device   | Direct access            |
+| NAO_ROBOT                  | Coaching Device   | Direct access            |
+| NETATMO_AIR_QUALITY        | Smart home Sensor | Access via cloud service |
+| ENOCEAN_DOOR_SENSOR        | Smart home Sensor | Direct access            |
+| ENOCEAN_MOTION_SENSOR      | Smart home Sensor | Direct access            |
+| ENOCEAN_TEMPERATURE_SENSOR | Smart home Sensor | Direct access            |
+| DELTADORE_INTRUSION_SENSOR | Smart home Sensor | Direct access            |
+| DELTADORE_MOTION_SENSOR    | Smart home Sensor | Direct access            |
+| NEU_BRAIN                  | Wearable Device   | Access via cloud service |
+| NEU_TRAINING               | Wearable Device   | Access via cloud service |
+| OURARING_ACTIVITY          | Wearable Device   | Access via cloud service |
+| OURARING_READINESS         | Wearable Device   | Access via cloud service |
+| OURARING_SLEEP             | Wearable Device   | Access via cloud service |
 
 ### Information of a registered device
 
@@ -120,11 +123,11 @@ On the Details page, specific and detailed information on the device of interest
 
 - _Device Name:_ The Name assigned by the user to the device during the registration phase.
 - _Source Device Id:_ this value corresponds to the original identification code of the device (if present).
-- _Type:_ this value corresponds to the specific device typology. 
+- _Type:_ this value corresponds to the specific device typology.
 - _Creation Date:_ registration date of the device on the platform.
 - _Last modification Date:_ date of the most recent modification of the device information
-- _e-VITA Device Token:_ generated by e-VITA during the registration of the device, it is intended to be used as an API key to authorize the device to send the data. It is important to underline that each device has a different _e-VITA Device Token_, that can be regenerated from the e-VITA Dashboard. Only the user that registered the device is able to access this private information, thanks to the user authentication and authorization solutions. 
-- _e-VITA Device Id:_ generated by e-VITA during the registration phase and assigned to the device to uniquely identify it. 
+- _e-VITA Device Token:_ generated by e-VITA during the registration of the device, it is intended to be used as an API key to authorize the device to send the data. It is important to underline that each device has a different _e-VITA Device Token_, that can be regenerated from the e-VITA Dashboard. Only the user that registered the device is able to access this private information, thanks to the user authentication and authorization solutions.
+- _e-VITA Device Id:_ generated by e-VITA during the registration phase and assigned to the device to uniquely identify it.
 - _QR-Code:_ QR code to provide device information to devices equipped with camera. It contains a JSON language string with the following fields:
   - _e-VITA Device Id_
   - _e-VITA Device Token_
@@ -132,8 +135,8 @@ On the Details page, specific and detailed information on the device of interest
   - _Curl example:_ example for using the endpoint to send data from the device
   - _User Language:_ the field contains the information relating to the user&#39;s language
 - _Attributes:_ this field contains the specific information fields of the device measurements (for example temperature, humidity, noise, etc.).
-- _Endpoint to get the last measure:_ this field contains the _cURL command_ which specifies all the necessary information (request type, endpoint, request headers) to make the request to the Orion Context Broker in order to obtain the last measurement provided by the specific device_._
-- _Last measure:_ It is the value of the last measurement provided by the specific device_._
+- _Endpoint to get the last measure:_ this field contains the _cURL command_ which specifies all the necessary information (request type, endpoint, request headers) to make the request to the Orion Context Broker in order to obtain the last measurement provided by the specific device*.*
+- _Last measure:_ It is the value of the last measurement provided by the specific device*.*
 - _Endpoint to send measures:_ this field contains the _cURL command_ which specifies all the necessary information (request type, endpoint, request headers) to make the request to the specific REST API of the e-VITA platform to which the device will send its measurements; they will be stored in the Object Storage and in the Orion Context Broker or, in the case of a Coaching Device, through this request, the text message, will be sent to the Dialogue Manager (Rasa). This field will be displayed only if the device can directly send its measurements (i.e. &quot;direct access&quot; type).
 - _Example Payload:_ it contains an example of payload to be sent in the body of the request described in the field _Endpoint to send measures._ The payload type changes based on the device type. This field will be displayed only if the _Endpoint to send measures_ field exists.
 - _Update measures frequency:_ This field will be displayed only if the device belongs to the &quot;Access via Cloud service&quot; category. It contains a field that allows the user to configure the _Frequency_ parameter of the device.
@@ -170,8 +173,8 @@ The Figure shows the e-VITA platform page that allows the user to access to one 
 
 The Cloud services currently supported by the platform are the following:
 
-- _Netatmo cloud platform:_ this external service allows to obtain the measurements of the &quot;NETATMO\_AIR\_QUALITY&quot; devices.
-- _Neu cloud platform for Neu device:_ this external service allows to obtain the measurements of the &quot;NEU&quot; devices. 
+- _Netatmo cloud platform:_ this external service allows to obtain the measurements of the &quot;NETATMO_AIR_QUALITY&quot; devices.
+- _Neu cloud platform for Neu device:_ this external service allows to obtain the measurements of the &quot;NEU&quot; devices.
 - _Oura ring cloud platform:_ this external service allows to obtain the measurements of the &quot;OURARING&quot; devices owned by the user.
 
 The user has to access with his credential to the specific cloud service before registering the relative device, in order to give the permission to e-VITA platform to get the measures from the cloud. The system will remind to access the cloud if the user tries to register the respective sensors before.
@@ -194,6 +197,5 @@ The user can request to log-out from a specific Cloud Service. Removing a Cloud 
 
 In addition, two different possibilities are presented to the user:
 
-- The user can decide to log-out from the Cloud Service and permanently delete all the devices relating to the specific Cloud Service, from his registered devices. 
+- The user can decide to log-out from the Cloud Service and permanently delete all the devices relating to the specific Cloud Service, from his registered devices.
 - The user can decide to log-out from the Cloud Service but to maintain the related devices still stored and viewable among the user registered devices. In this case, however, having logged out from the service, these devices will change their status in _disabled_; this means that their information will remain stored and still visible on the _Devices_ page, but the extraction by the e-VITA platform of new measurements, taken by these devices, will be suspended.
-
