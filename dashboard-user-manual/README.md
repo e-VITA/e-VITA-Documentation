@@ -89,15 +89,15 @@ The Figure shows the registration device page. In this phase, the e-VITA dashboa
 
 The user can, in several steps, first select a specific category of devices from those available.
 
-<span><img title="title" alt="text" src="./img/Register_device_page.png" style="width:60%;margin-left: 30%;"></span>
+<span><img title="title" alt="text" src="./img/Register_device_page.png" style="border: 2px solid #555;width:60%;margin-left: 30%;"></span>
 
 In the next step, you can select the specific type of device to register, from those available.
 
-<span><img title="title" alt="text" src="./img/Register_device_page2.png" style="width:60%;margin-left: 30%;"></span>
+<span><img title="title" alt="text" src="./img/Register_device_page2.png" style="border: 2px solid #555;width:60%;margin-left: 30%;"></span>
 
 Finally, in the final step, the user can enter specific information relating to the device to be added.
 
-<span><img title="title" alt="text" src="./img/Register_device_page3.png" style="width:40%;margin-left: 30%;"></span>
+<span><img title="title" alt="text" src="./img/Register_device_page3.png" style="border: 2px solid #555;width:45%;margin-left: 30%;"></span>
 
 The Table shows the classification of the possible devices currently supported by the e-VITA platform. It should be noticed that, in e-VITA platform, the devices are managed as logical entities related to the different typologies of measure that the device provides, therefore for some real devices there can be more logical devices. For instance, in the system, there are three different logical Oura Ring devices (OURARING_ACTIVITY, OURARING_READINESS, OURARING_SLEEP) even there is only one real device that provides all these measurement
 
