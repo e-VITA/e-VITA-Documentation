@@ -39,7 +39,7 @@ At the first access to the e-VITA platform, additional information will be reque
 
 Only once this information has been entered, it will be possible for the user to access the main dashboard.
 
-<span><img title="User profile form" alt="User profile form" src="./img/complete_profile.png" style="border: 2px solid #555;width:40%; margin-left:30%"></span>
+<span><img title="User profile form" alt="User profile form" src="./img/complete_profile.png" style="border: 2px solid #555;width:50%; margin-left:30%"></span>
 
 ## Homepage: general overview of the devices
 
@@ -56,7 +56,7 @@ The Homepage is the first page of the e-VITA dashboard where is presented an ove
 
 Within the _Homepage_, in the menu at the top right under the username, it is possible to access the section that allows to change the user profile.
 
-<span><img title="User profile update" alt="User profile update" src="./img/update_profile.png" style="border: 2px solid #555;width:40%; margin-left:30%"></span>
+<span><img title="User profile update" alt="User profile update" src="./img/update_profile.png" style="border: 2px solid #555;width:50%; margin-left:30%"></span>
 
 Here, the user can change the fields he entered when registering on the e-VITA platform (such as Country, Language, Telegram username, etc.)
 
@@ -97,7 +97,7 @@ In the next step, you can select the specific type of device to register, from t
 
 Finally, in the final step, the user can enter specific information relating to the device to be added.
 
-<span><img title="title" alt="text" src="./img/Register_device_page3.png" style="width:60%;margin-left: 30%;"></span>
+<span><img title="title" alt="text" src="./img/Register_device_page3.png" style="width:40%;margin-left: 30%;"></span>
 
 The Table shows the classification of the possible devices currently supported by the e-VITA platform. It should be noticed that, in e-VITA platform, the devices are managed as logical entities related to the different typologies of measure that the device provides, therefore for some real devices there can be more logical devices. For instance, in the system, there are three different logical Oura Ring devices (OURARING_ACTIVITY, OURARING_READINESS, OURARING_SLEEP) even there is only one real device that provides all these measurement
 
