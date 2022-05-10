@@ -30,13 +30,16 @@ After registering on the Keycloak platform and logging in, the user will be redi
 
 At the first access to the e-VITA platform, additional information will be requested to the user to complete the ones provided during the registration phase. This additional information will be used to provide personalised service to the e-VITA user. Currently the information to be provided are:
 
+- _Username:_ the username associated with the user within the platform.
+- User _Gender:_ the gender of the user.
 - User _Country:_ considering the context of use of the e-VITA platform within the project*,* the countries that can selected are France, Italy, Germany and Japan.
 - User _City:_ based on the previous selection, the user can choose one of the cities belonging to the selected Country.
 - User _Language:_ considering the possible Countries that the user can select, the provided languages that can be chosen by the user will be Italian, English, French, German and Japanese.
+- User _Telegram username:_ the username associated with the user within the Telegram app, if the user is registered in it.
 
 Only once this information has been entered, it will be possible for the user to access the main dashboard.
 
-<span><img title="User profile form" alt="User profile form" src="./img/User_profile_completion_form.png" style="border: 2px solid #555;width:60%; margin-left:20%"></span>
+<span><img title="User profile form" alt="User profile form" src="./img/complete_profile.png" style="border: 2px solid #555;width:40%; margin-left:30%"></span>
 
 ## Homepage: general overview of the devices
 
@@ -48,6 +51,14 @@ The Homepage is the first page of the e-VITA dashboard where is presented an ove
 - A _Refresh_ button: this button allows the user to visualize the last updated measurement of the device, if its value has changed.
 
 ![alt tag](./img/Homepage_platform_section.png "Homepage platform section")
+
+### User profile update
+
+Within the _Homepage_, in the menu at the top right under the username, it is possible to access the section that allows to change the user profile.
+
+<span><img title="User profile update" alt="User profile update" src="./img/update_profile.png" style="border: 2px solid #555;width:40%; margin-left:30%"></span>
+
+Here, the user can change the fields he entered when registering on the e-VITA platform (such as Country, Language, Telegram username, etc.)
 
 ## Device page: devices management
 
@@ -107,6 +118,7 @@ For the devices included in this category an additional field will be displayed 
 
 | Device Type                | Device Category   | Platform access type     |
 | -------------------------- | ----------------- | ------------------------ |
+| ANDROID_ROBOT              | Coaching Device   | Direct access            |
 | CELESTE                    | Coaching Device   | Direct access            |
 | DARUMA                     | Coaching Device   | Direct access            |
 | GATEBOX                    | Coaching Device   | Direct access            |
@@ -186,6 +198,8 @@ The Cloud services currently supported by the platform are the following:
 The user has to access with his credential to the specific cloud service before registering the relative device, in order to give the permission to e-VITA platform to get the measures from the cloud. The system will remind to access the cloud if the user tries to register the respective sensors before.
 
 ![alt tag](./img/Cloud_Services_page.png "Cloud Services page")
+
+**Please note:** Access to the cloud service would be preferable in the private mode of the browser, so that the session information is not stored; in this way, it cannot be a problem that users registered with different profiles in the e-VITA platform want to sign into the same cloud service from the same terminal.
 
 ### Cloud Service log-in
 
