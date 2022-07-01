@@ -245,3 +245,13 @@ To do this, the user can send text messages and view the replies from the Dialog
 The Figure shows an example of a conversation.
 
 <span><img title="Dialogue Manager page" alt="Dialogue Manager page" src="./img/Dialogue_manager_page.png" style="border: 2px solid #555;width:80%;"></span>
+
+## Historical Data
+
+This page is associated with an item in the side menu that appears to the user only if he has a specific role in the Identity Manager.
+More precisely, the functionality of being able to obtain all measurements/messages sent by the devices/coaching devices registered in the platform, is enabled only for some users of the platform.
+This functionality is for data analysis purposes: authorized users will be able to obtain in a CSV file all the historical data stored in the Object Storage and information such as: Id and token of the device to which the measurements/messages belong and the user who registered the device.
+
+As can be seen in the Figure, the user has the possibility to obtain the data of all the Devices or only of a part; he can select a time slot of interest (or even just the start date) and the type of device of interest.
+
+![alt tag](./img/all_historical_data.png "Historical data page")
