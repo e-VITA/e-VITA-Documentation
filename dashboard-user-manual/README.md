@@ -43,7 +43,13 @@ Only once this information has been entered, it will be possible for the user to
 
 ## Homepage: general overview of the devices
 
-The Homepage is the first page of the e-VITA dashboard where is presented an overview of the devices registered by the user. The page presents a _card_ graphic component for each device previously registered by the user; each of them provides the following device information:
+The Homepage is the first page of the e-VITA dashboard where is presented an overview of the devices registered by the user.
+The page has two different menus:
+
+- _Side menu_ from which to access the other functions of the platform and download the user and installation manuals.
+- _User menu_ from which to view and modify profile information.
+
+The page presents a _card_ graphic component for each device previously registered by the user; each of them provides the following device information:
 
 - _Device Name:_ the name chosen by the user and associated with the device during device registration phase.
 - _Device ID:_ an alphanumeric string associated with the device during device registration phase, generated and assigned internally by the e-VITA platform in order to uniquely identify the device.
@@ -71,11 +77,21 @@ The basic information of the device shown on each card are the following:
 
 The possible operations on the device are the following:
 
-- _Delete:_ through this operation, the user will delete the specific device from the e-VITA platform and the related data in the Object Storage and the Orion Context Broker. More details on this operation in section 2.5.4.
-- _Details:_ through this operation, the user will be able to view a specific page where are included detailed information of the selected device and instructions for sending and/or reading the measurements.
 - _Enable/disable:_ Through this operation, the user has the possibility to change the status of the device: by disabling it, the device information and previous collected data will remain saved in the e-VITA platform, but the device will be not able to send/receive data.
+- _Details:_ through this operation, the user will be able to view a specific page where are included detailed information of the selected device and instructions for sending and/or reading the measurements.
+- _Obtain historical data_: through this operation, the user can download a file containing the measurements/messages sent by the device. To define a time frame, must be selected a start date (mandatory) and an end date (optional).
+- _Edit_: through this operation, it is possibile to change the device name and manage additional attributes.
+- _Delete:_ through this operation, the user will delete the specific device from the e-VITA platform and the related data in the Object Storage and the Orion Context Broker. More details on this operation in section 2.5.4.
 
 ![alt tag](./img/Devices_page.png "Devices page")
+
+The figure below shows the dialogue to get historical data.
+
+<span><img title="title" alt="text" src="./img/historical_data.png" style="border: 2px solid #555;width:45%;margin-left: 30%;"></span>
+
+The following figure shows the dialogue to edit the device attributes.
+
+<span><img title="title" alt="text" src="./img/edit.png" style="border: 2px solid #555;width:45%;margin-left: 30%;"></span>
 
 ### Device registration
 
@@ -153,6 +169,7 @@ On the Details page, specific and detailed information on the device of interest
   - _Curl example:_ example for using the endpoint to send data from the device
   - _User Language:_ the field contains the information relating to the user&#39;s language
 - _Attributes:_ this field contains the specific information fields of the device measurements (for example temperature, humidity, noise, etc.).
+- _Additional Attributes:_ this field contains the additional device attributes, if the user added them via the _Edit_ section.
 - _Endpoint to get the last measure:_ this field contains the _cURL command_ which specifies all the necessary information (request type, endpoint, request headers) to make the request to the Orion Context Broker in order to obtain the last measurement provided by the specific device*.*
 - _Last measure:_ It is the value of the last measurement provided by the specific device*.*
 - _Endpoint to send measures:_ this field contains the _cURL command_ which specifies all the necessary information (request type, endpoint, request headers) to make the request to the specific REST API of the e-VITA platform to which the device will send its measurements; they will be stored in the Object Storage and in the Orion Context Broker or, in the case of a Coaching Device, through this request, the text message, will be sent to the Dialogue Manager (Rasa). This field will be displayed only if the device can directly send its measurements (i.e. &quot;direct access&quot; type).
@@ -219,3 +236,12 @@ In addition, two different possibilities are presented to the user:
 
 - The user can decide to log-out from the Cloud Service and permanently delete all the devices relating to the specific Cloud Service, from his registered devices.
 - The user can decide to log-out from the Cloud Service but to maintain the related devices still stored and viewable among the user registered devices. In this case, however, having logged out from the service, these devices will change their status in _disabled_; this means that their information will remain stored and still visible on the _Devices_ page, but the extraction by the e-VITA platform of new measurements, taken by these devices, will be suspended.
+
+## Dialogue Manager page
+
+In this page, the user has the possibility to test the functioning of the _Dialogue manager (RASA)_ instance connected to the platform.
+To do this, the user can send text messages and view the replies from the Dialogue Manager.
+
+The Figure shows an example of a conversation.
+
+<span><img title="Dialogue Manager page" alt="Dialogue Manager page" src="./img/Dialogue_manager_page.png" style="border: 2px solid #555;width:80%;"></span>
